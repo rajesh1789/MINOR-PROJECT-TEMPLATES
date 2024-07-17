@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            /* Set background image and adjust background properties */
+            background-image: url("https://health.uconn.edu/health-leaders/wp-content/uploads/sites/236/2023/01/readmissions.jpg");
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            font-family: Arial, sans-serif; /* Example font family */
+            color: #333; /* Example text color */
+            margin: 150px; /* Remove default margin */
+            padding: 20px; /* Example padding */
+        }
+        h1, p {
+            /* Example styles for heading and paragraph */
+            text-align: center; /* Center align text */
+        }
+        form {
+            /* Example styles for form */
+            text-align: center; /* Center align form */
+            margin-top: 20px; /* Example margin */
+        }
+        button {
+            /* Example styles for button */
+            padding: 10px 20px; /* Example padding */
+            font-size: 16px; /* Example font size */
+            background-color: #007bff; /* Example button color */
+            color: rgb(244, 244, 244); /* Example button text color */
+            border: none; /* Remove default button border */
+            cursor: pointer; /* Change cursor on hover */
+        }
+        button:hover {
+            /* Example styles for button hover */
+            background-color: #000000; /* Example button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>Click below to go to the prediction page:</p>
+    <form action="/predict" method="POST">
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://storage.googleapis.com/infinity_bucket/blog_images/2018-11-21/hospital-readmission.png");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Prediction Form</h1>
+        <form action="/out" method="POST">
+            
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br>
+
+            <label for="admission_type_id">Admission Type ID:</label>
+            <input type="text" id="admission_type_id" name="admission_type_id" required><br>
+
+            <label for="discharge_disposition_id">Discharge Disposition ID:</label>
+            <input type="text" id="discharge_disposition_id" name="discharge_disposition_id" required><br>
+
+            <label for="admission_source_id">Admission Source ID:</label>
+            <input type="text" id="admission_source_id" name="admission_source_id" required><br>
+
+            <label for="time_in_hospital">Time in Hospital:</label>
+            <input type="text" id="time_in_hospital" name="time_in_hospital" required><br>
+
+            <label for="num_lab_procedures">Number of Lab Procedures:</label>
+            <input type="text" id="num_lab_procedures" name="num_lab_procedures" required><br>
+
+            <label for="num_medications">Number of Medications:</label>
+            <input type="text" id="num_medications" name="num_medications" required><br>
+
+            <label for="number_outpatient">Number of Outpatient Visits:</label>
+            <input type="text" id="number_outpatient" name="number_outpatient" required><br>
+
+            <label for="number_emergency">Number of Emergency Visits:</label>
+            <input type="text" id="number_emergency" name="number_emergency" required><br>
+
+            <label for="number_inpatient">Number of Inpatient Visits:</label>
+            <input type="text" id="number_inpatient" name="number_inpatient" required><br>
+
+            <label for="diag_1">Primary Diagnosis Code:</label>
+            <input type="text" id="diag_1" name="diag_1" required><br>
+
+            <label for="diag_2">Secondary Diagnosis Code:</label>
+            <input type="text" id="diag_2" name="diag_2" required><br>
+
+            <label for="diag_3">Additional Diagnosis Code:</label>
+            <input type="text" id="diag_3" name="diag_3" required><br>
+
+            <label for="number_diagnoses">Number of Diagnoses:</label>
+            <input type="text" id="number_diagnoses" name="number_diagnoses" required><br>
+
+            <label for="metformin">Metformin:</label>
+            <input type="text" id="metformin" name="metformin" required><br>
+
+            <label for="repaglinide">Repaglinide:</label>
+            <input type="text" id="repaglinide" name="repaglinide" required><br>
+
+            <label for="glipizide">Glipizide:</label>
+            <input type="text" id="glipizide" name="glipizide" required><br>
+
+            <label for="insulin">Insulin:</label>
+            <input type="text" id="insulin" name="insulin" required><br>
+
+            <label for="change">Change:</label>
+            <input type="text" id="change" name="change" required><br>
+
+            <label for="diabetesMed">Diabetes Medication:</label>
+            <input type="text" id="diabetesMed" name="diabetesMed" required><br>
+
+            <label for="age_derived">Derived Age:</label>
+            <input type="text" id="age_derived" name="age_derived" required><br>
+
+            <label for="count_Steady">Count Steady:</label>
+            <input type="text" id="count_Steady" name="count_Steady" required><br>
+
+            <label for="count_Down">Count Down:</label>
+            <input type="text" id="count_Down" name="count_Down" required><br>
+
+            <label for="count_Up">Count Up:</label>
+            <input type="text" id="count_Up" name="count_Up" required><br>
+
+            <button type="submit">Predict Readmission</button>
+        </form>
+    </div>
+</body>
+</html>
